@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity and Cascade</title>
+    <style>
+        /* Specificity Calculation
+        To calculate specificity, assign a value to each part of the selector:
+
+        Universal Selector: 0
+        Element selectors and pseudo-elements: 1
+        Class selectors, attribute selectors, and pseudo-classes: 10
+        ID selectors: 100
+        Inline styles: 1000 
+        If we put !important its specifity will be 10000*/
+
+        /* The specificity of this selector is 1 */
+        h1 {
+            color: aqua;
+
+        }
+
+        /* The specificity of this selector is 10 */
+        .yellow {
+            color: yellow;
+        }
+
+        /* The specificity of this selector is 10 */
+        .cred {
+            color: red !important;
+        }
+
+        /* The specificity of this selector is 10 */
+        .cpurple {
+            color: purple;
+        }
+
+        /* This is attribute selector. The specificity of this selector is 10  */
+        /* [data-x=a]{
+            background-color: violet;
+        } */
+
+        /* The specifity of this selector is 1 + 10 + 10 + 10 + 10 = 41. 1 (element) + 20 (classes) + 10 (attribute) + 10 (pseudo-class) = 41. */
+        /* a.harryclass.rohan-class[href]:hover {
+        color: red;
+        } */
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 style="color: maroon;" class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+</body>
+
+</html>
