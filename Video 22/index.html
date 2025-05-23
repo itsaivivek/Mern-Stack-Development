@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1366px; */
+            width: 80vw;
+            height: 10vh;
+            margin: auto;
+            background-color: aquamarine;
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid black;
+            /* width: 1366px; */
+            width: 80vw;
+            margin: 23px auto;
+            /* height: 80vh; */
+            min-height: 80vh;
+            /* font-size: 18px; */
+            background-color: aquamarine;
+        }
+
+        .container > div {
+            font-size: 2em;
+            border: 2px solid red;
+            width: 50%;
+        }
+        .container > div > div{
+            border: 2px solid blue;
+            width: 50%;
+        }
+        .mycont {
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: rgb(19, 19, 15);
+            font-size: 22px;
+            /* width: 100vmin; */
+            width: 80vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        This is a box
+    </div>
+    <div class="container">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolorum laboriosam
+        quibusdam nisi quaerat amet minima odit ipsa officia velit culpa fugit, sint libero tempore rerum voluptatem
+        ipsam porro nostrum nulla tenetur excepturi! Voluptatibus rerum necessitatibus illo dolorum eveniet explicabo
+        nihil veniam enim labore delectus, id a hic incidunt, distinctio omnis accusamus unde corrupti, tempora itaque?
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, doloribus. Harum corporis consequuntur, vero deserunt iure dolorem aspernatur nesciunt iste laudantium aliquam eligendi.
+        </div>
+    </div>
+        Expand lorem1222 to see that this container adjust its height.
+
+    </div>
+    <div class="mycont">
+        I am another container.
+    </div>
+</body>
+
+</html>
