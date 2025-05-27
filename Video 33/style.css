@@ -1,0 +1,75 @@
+:root {
+    --backcolor: rgba(44, 150, 248, 0.76);
+    --textcolor: rgb(255, 255, 255);
+    --hovercolor: rgb(167, 226, 57);
+    --hoverbackcolor: rgba(51, 48, 48, 0.301);
+    --cursortype: pointer;
+    --logincolor: rgb(240, 191, 32);
+    --fontsize: 18px;
+    --navpadding: 34px;
+}
+
+@media only screen and (max-width:910px){
+    ul .button {
+    /* padding: 0px 10px 0px 10px; */
+    display: none;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding-top: 50px;
+    min-height: 500px;
+    padding: 34px;
+    font-size: var(--fontsize);
+}
+
+header {
+    width: 100vw;
+    background-color: var(--backcolor);
+    color: var(--textcolor);
+    font-size: var(--fontsize);
+    position: relative;
+}
+
+div {
+    display: inline-flex;
+}
+
+ul li {
+    list-style: none;
+    padding: var(--navpadding);
+}
+
+ul .navbar li:hover {
+    color: var(--hovercolor);
+    cursor: var(--cursortype);
+    background-color: var(--hoverbackcolor);
+    border: 1px solid var(--hovercolor);
+    border-radius: 300px;
+}
+
+ul .button {
+    /* padding: 0px 10px 0px 10px; */
+    position: absolute;
+    top: -7px;
+    right: 10px;
+}
+
+ul li button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(240, 218, 96);
+}
+
+ul li button:hover {
+    cursor: var(--cursortype);
+    background-color: var(--hovercolor);
+    color: var(--textcolor);
+}
