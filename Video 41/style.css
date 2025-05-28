@@ -1,0 +1,43 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+img{
+    /* padding: 30px; */
+    margin: 25px;
+    height: 100px;
+    position: absolute;
+    left: -200px;
+
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+.list ul{
+    display: flex;
+}
+ul li{
+    margin: 25px;
+    list-style: none;
+    padding: 35px 15px;
+    font-size: 23px;
+    color: rgba(0, 0, 0, 0.644);
+}
+.list{
+    right: -200px;
+}
+.arrow::after{
+    content: ' ⌄';
+    position: relative;
+    top: -7px;
+}
+.hover:hover{
+    color: rgba(0, 0, 0, 0.26);
+}
+img, li:hover{
+    cursor: pointer;
+}
