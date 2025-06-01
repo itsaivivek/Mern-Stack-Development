@@ -1,0 +1,203 @@
+/* This is a temporary stylesheet. It works also very well with html but there are px units which make it unresponsive. So i created another style1.css which use vw unit to make responsive */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* header start here  :*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 200px;
+}
+
+nav .list ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav .list ul li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #222222;
+    display: flex;
+    align-items: end;
+}
+
+nav .list ul li img {
+    width: 18px;
+    padding: 0 3px;
+}
+
+/* main start here */
+.container {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.container .intro {
+    display: flex;
+    align-items: center;
+}
+
+/* Intro Box CSS Here */
+.intro {
+    flex-direction: column;
+    text-align: center;
+    max-width: 960px;
+    margin: 40px 0px;
+}
+
+.heading {
+    display: flex;
+}
+
+.heading img {
+    margin: 21px;
+    cursor: pointer;
+}
+
+.intro h2 {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.intro h2 strong {
+    font-weight: 600;
+}
+
+.intro p {
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.intro a button {
+    border: none;
+    background-color: #00b6d1;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    margin: 40px;
+    cursor: pointer;
+}
+
+/* Download Caption Box css here */
+.icon img {
+    width: 55px;
+}
+
+.caption {
+    margin: 20px 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* gap: 30px; */
+}
+
+.download {
+    margin-left: 20px;
+    margin-right: 5px;
+    font-size: 24px;
+    color: #222222;
+}
+
+.hotfix {
+    color: #222222;
+    padding-top: 11px;
+    font-weight: 370;
+    font-size: 14px;
+}
+
+/* grid start here  */
+.grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    /* grid-template-rows: 33% 33% 33%; */
+    grid-template-rows: auto;
+    max-width: 960px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 45px;
+    row-gap: 45px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.languages {
+    line-height: 21px;
+    height: 201px;
+    margin: -12px;
+    max-width: 302px;
+    /* height: 100px; */
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 5px;
+
+}
+
+.box .grid .languages h4 {
+    font-size: 20px;
+    padding: 0 0 10px;
+}
+
+.box .grid .languages p:nth-child(2) {
+    font-size: 12px;
+    padding: 0 0 10px;
+}
+
+.box .grid .languages p:nth-child(4) {
+    font-size: 10px;
+    padding-top: 8px;
+}
+
+.box .grid .languages p:nth-child(5) {
+    font-size: 8px;
+    /* padding-top: 5px; */
+}
+
+.box .grid .languages p:nth-child(6) {
+    font-size: 8px;
+    /* padding-top: 5px; */
+}
+
+.box .grid .languages button {
+    background-color: #5cb85c;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Media queries here  */
+@media only screen and (max-width: 1072px) {
+
+    
+    /* grid start here  */
+    .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+}
+@media only screen and (max-width:698){}
