@@ -1,0 +1,2 @@
+We have learnt figma all concept features.
+Figma is a powerful, collaborative cloud-based design and prototyping tool primarily used for UI and UX design. It's versatile, enabling teams to create, share, and iterate on designs in real-time, particularly for creating wireframes, interactive prototypes, and design systems.
