@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a Program to calculate factorial of number using reduce and using for loops
+    eg- 6! = 6*5*4*3*2*1 
+    -->
+
+    <script>
+        let n = prompt("Enter any number");
+        
+        // Solving using reduce
+        let arr = [];
+        for (let i = 1; i <= n; i++) {
+            arr.push(i);
+        } // for loop to push values inside array from 1 to userinput
+        let fact = (a,b) => {
+            return a*b;
+        }
+        let fact1 = arr.reduce(fact);
+        console.log("The factorial using reduce\(\) is", fact1);
+
+        // Solving using for loop
+        let fact2 = 1;
+        for (let i = 1; i <= n; i++) {
+            fact2 *= i;
+        }
+        console.log("The factorial using for-loop is", fact2)
+    </script>
+</body>
+</html>
