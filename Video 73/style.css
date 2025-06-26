@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+.card{
+    padding: 10px;
+    background-color: #1f2020;
+    color: white;
+    height: 80px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 6px;
+}
+.css-thumbnail{
+    border-radius: 8px;
+    height: 84px;
+    width: 150px;
+    background-image: url(https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw);
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.css-thumbnail .css-duration{
+    background-color: rgba(0, 0, 0, 0.705);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 2px 4px;
+    padding: 1px 4px;
+}
+.text{
+ display: flex;
+ flex-direction: column;
+ height: 84px;
+}
+.css-title{
+    font-size: 16px;
+    font-family: "Roboto", "Arial", sans-serif;
+    margin-bottom: 8px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 500;
+}
+.subhead{
+    font-size: 12px;
+    display: flex;
+    color: rgb(170, 170, 170);
+}
+.fullstop{
+    font-size: 20px;
+    margin: -8px 4px;
+}
