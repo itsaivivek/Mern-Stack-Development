@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container red bg-green">
+        <div class="box" style="display: flex;" data-createdby="Vivek" data-conceptby="Harry">Hey I am a Box</div>
+        <div class="box">Hey I am a Box</div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+        // let div = document.createElement('div');
+        // div.innerHTML="I have been inserted <b>Harry</b>"
+        // div.setAttribute("class", "created");
+        // document.querySelector(".container").append(div)
+        // document.querySelector(".container").before(div)
+        // document.querySelector(".box").replaceWith(div)
+
+        let cont = document.querySelector(".container");
+        cont.insertAdjacentHTML("afterend", "<b> I am under the water. Please help me here too much raining .... iuuuoooo </b>")
+        // document.querySelector(".box").remove()
+        console.log(document.querySelector(".container").classList)
+        console.log(document.querySelector(".container").className)
+
+        // document.querySelector(".container").classList.add("harry")
+        // document.querySelector(".container").classList.remove("red")
+        document.querySelector(".container").classList.toggle("red")
+    </script>
+
+</body>
+
+</html>
