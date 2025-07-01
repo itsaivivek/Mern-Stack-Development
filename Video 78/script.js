@@ -25,7 +25,7 @@ function inserting(textarr) {
                   e.classList.remove("text");
                 }
                 )
-            }, 1000);
+            }, 2000);
         }
     }, (getrandomDelay()))
 
