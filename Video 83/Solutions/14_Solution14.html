@@ -1,0 +1,59 @@
+<!-- The Window Scroller:
+    You are developing a single-page application with a smooth scrolling effect. Implement a function named smoothScrollToTop that smoothly scrolls the window to the top when called. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Window Scroller</title>
+    <style>
+        *{
+            margin: 14px;
+            padding: 10px;
+        }
+        h1{
+            font-size: 55px;
+        }
+        p{
+            line-height: 2;
+            font-size: 30px;
+        }
+        .button{
+            border: 2px solid black;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            font-size: 35px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: rgb(50, 175, 224);
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <div class="button">&uarr;</div>
+    <script>
+        function smoothScrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        document.body.querySelector(".button").addEventListener("click", (event) => {
+            smoothScrollToTop()
+        }
+        )
+    </script>
+    <p>Para 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, harum nisi? Quos assumenda laborum dicta voluptates repudiandae mollitia eligendi fugit asperiores ducimus culpa quo quis sunt quia esse voluptatibus, nobis qui perferendis placeat modi labore! Repellat incidunt doloremque ducimus ex dignissimos aperiam est unde vitae vel ullam adipisci, voluptate deserunt consectetur. Soluta aspernatur aperiam molestias omnis excepturi architecto veritatis porro voluptates earum, quo explicabo maxime aliquam. Nulla vitae, tempora molestiae facilis in cumque adipisci esse sapiente ipsam, maxime maiores repudiandae? Et, iste natus. Similique voluptatum dolore est eaque aliquid, quia ad assumenda ratione nemo quis itaque, dolorum quae soluta! Voluptates, accusamus! Ad voluptatum exercitationem nesciunt provident consequuntur quia omnis nisi rem cum nam? Ea a nobis illo recusandae, dicta expedita maiores quas adipisci qui veniam, ipsum repellendus. Sequi amet veniam illum nihil quae doloremque tempore sint quibusdam id neque in minus quasi esse incidunt quia repellat blanditiis, vero quod accusantium quisquam. Facere nesciunt atque temporibus, architecto laborum magni totam aliquid molestiae, et qui, fuga vel illum eveniet modi dolore nihil! A sunt nisi vero illo facilis culpa officia amet quae, delectus similique veniam quis sequi aliquid pariatur fuga at aut quam voluptas. Dignissimos excepturi, error fugiat voluptate corrupti voluptas! Ducimus.</p>
+    <p>Para2: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur amet dolorum dignissimos ea. Laudantium voluptas nemo blanditiis iste error ab consectetur amet dicta vel assumenda? Nemo, dolor? Placeat maxime distinctio neque pariatur et vel harum perferendis, beatae tempora nisi dolore minus nobis id. Sunt, corporis minus dolorem quasi quos et dignissimos, consequatur in impedit facilis vero rerum quas commodi enim tempore necessitatibus debitis repellendus est perferendis hic cum nobis consectetur neque maiores! Doloribus, consequuntur. Aspernatur nam, quidem dolorum eaque nemo fugiat minus hic, eos voluptate excepturi voluptatum fuga aut labore laboriosam tenetur porro magni dolore accusamus quam quaerat libero in numquam sint? Aliquam officiis quis impedit itaque. Quos sapiente, assumenda in, odio reprehenderit soluta fugiat libero itaque exercitationem reiciendis, similique facilis nulla laudantium iure sunt officiis. Adipisci vero dolores obcaecati, id incidunt recusandae, iste deleniti eveniet tempora perspiciatis harum et optio quidem laborum nobis illum voluptate dolor reprehenderit ratione mollitia distinctio eum? Doloremque, saepe nobis! Voluptatem quaerat, error voluptates porro alias minima aliquid earum obcaecati ad voluptatibus velit delectus at. Totam porro tempore nisi earum accusamus cupiditate iste expedita molestiae reprehenderit incidunt quisquam debitis laudantium maxime distinctio officiis omnis sunt minus, eius officia commodi? Hic amet nulla reprehenderit beatae eveniet!</p>
+
+    
+</body>
+</html>
