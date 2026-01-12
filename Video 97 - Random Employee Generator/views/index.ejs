@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random Employee Generator</title>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #F8FAFC;
+      margin: 10px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      /* align-items: center; */
+      max-width: 1300px;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .container .object-card {
+      background-color: #242424;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 1.2;
+      border: 2px solid #ADADAD;
+    }
+
+    @media (max-width:1020px) {
+      .container {
+      grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width:583px) {
+      .container {
+      grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width:428px) {
+      .container {
+      grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="w3-container">
+    <h2>Random Employee Generator</h2>
+    <p>Click on 'Generate Now' to generate 10 dummy Employee data</p>
+
+    <div class="w3-light-grey">
+      <div id="myBar" class="w3-container w3-green" style="height:24px;width:0%">
+      </div>
+    </div>
+
+    <p id="myP">Added <span id="demo">0</span> of 10 Employees</p>
+
+    <button class="w3-button w3-green" id="generateNow" onclick="move();this.disabled='true'">Generate Now</button>
+    <button class="w3-button w3-blue" id="showData">Show Data</button>
+  </div>
+
+  <div class="container">
+    <!-- Objects will be inserted here by JavaScript -->
+  </div>
+
+
+  <script>
+    function move() {
+      var elem = document.getElementById("myBar");
+      var width = 0;
+      var id = setInterval(frame, 50);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          document.getElementById("myP").className = "w3-text-green w3-animate-opacity";
+          document.getElementById("myP").innerHTML = "Successfully generated 10 employee data!";
+        } else {
+          width++;
+          elem.style.width = width + '%';
+          var num = width * 1 / 10;
+          num = num.toFixed(0)
+          document.getElementById("demo").innerHTML = num;
+        }
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script>
+
+    document.querySelector("#generateNow").addEventListener("click", async () => {
+      console.log("yes")
+      let a = await fetch("/generate")
+    }
+    )
+    function displayObjects(arr) {
+      const objContainer = document.querySelector(".container")
+      let htmlContent = ""
+      for (let i = 0; i < arr.length; i++) {
+        const obj = arr[i];
+        htmlContent += `
+        <code>
+            <div class="object-card">
+              <p>{</p>
+              <p>name:${obj.name}</p>
+              <p>salary:${obj.salary}</p>
+              <p>codingLang:${obj.codingLang}</p>
+              <p>city:${obj.city}</p>
+              <p>isManager:${obj.isManager}</p>
+              <p>}</p>
+            </div>
+        </code>
+            `
+      }
+      objContainer.innerHTML = htmlContent;
+    }
+
+    document.querySelector("#showData").addEventListener("click", async () => {
+      console.log("Showing data")
+      let a = await fetch("/show")
+      let arr = await a.json()
+      displayObjects(arr)
+      // Re-enable the Generate Now button by its ID
+      const genBtn = document.getElementById("generateNow");
+      genBtn.disabled = false;
+
+      // Reset the progress bar for the next generation
+      document.getElementById("myBar").style.width = "0%";
+      document.getElementById("demo").innerHTML = "0";
+      document.getElementById("myP").innerHTML = 'Added <span id="demo">0</span> of 10 Employees';
+      document.getElementById("myP").className = "";
+    }
+    )
+  </script>
+</body>
+
+</html>
